@@ -19,7 +19,7 @@ git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloau
 3. Install Cocoapod client if not already installed `sudo gem install cocoapods`
 4. Configure the Cocoapod repository if not already configured `pod setup`
 3. Run the `pod install` command to download and install dependecies.
-4. Open the Xcode workspace: `open helloAxuthentication.xcworkspace`. From now on, open the xcworkspace file since it has the corret dependencies and configuration.
+4. Open the Xcode workspace: `open helloAuthentication.xcworkspace`. From now on, open the xcworkspace file since it has the corret dependencies and configuration.
 4. Open the AppDelegate and add the corresponding ApplicationRoute and
 ApplicationID in the application didFinishLaunchingWithOptions method:
 
@@ -36,8 +36,8 @@ IMFClient *imfClient = [IMFClient sharedInstance];
 return YES;
 }
 
-Set up Authentication.
-####Facebook authentication
+
+####Setup Facebook authentication
 
 Update the `Info.plist` file with your Facebook App information:
 
@@ -52,7 +52,7 @@ Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 ### Run the iOS App
 Now you can run your iOS application in your mobile emulator or on your device.
 
-You will see a single view application with a "PING BLUEMIX" button. When you click this button the application will test the connection from the client to ta protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the log as well as in the application. 
+You will see a single view application with a "PING BLUEMIX" button. When you click this button the application will test the connection from the client to a protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the log as well as in the application. 
 
 Note: Inside the ViewController a Get request to the Node.js runtime on Bluemix. This code has been provided in the MobileFirst Services Starter boilerplate.
 
