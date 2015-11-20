@@ -9,7 +9,7 @@ Before you can run the helloAuthentication application, you must set up an app o
 3. Set up at least one Authentication method on Bluemix for your mobile App (The sample is currently configured for Facebook)
 
 ### Downloading the samples
-Clone the samples from IBM DevOps Services with the following command:
+Clone the samples from Github with the following command:
 
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication
 
