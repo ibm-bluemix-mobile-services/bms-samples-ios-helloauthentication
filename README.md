@@ -24,7 +24,7 @@ Before you can run the helloAuthentication application, you must set up an app o
 
 Create a mobile backend in the  Bluemix dashboard:
 
-1.	In the Boilerplates section Bluemix catalog, click MobileFirst Services Starter.
+1.	In the Boilerplates section of the Bluemix catalog, click MobileFirst Services Starter.
 2.	Enter a name and host for your mobile backend and click Create.
 3.	Click **Finish**.
 
@@ -72,14 +72,14 @@ Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 [Learn more about using Facebook as an identity provider](https://www.ng.bluemix.net/docs/#services/mobileaccess/security/id_provs/index-gentopic2.html#usingfacebookauthentication)   
 
 ### Running the iOS App
-Now you can run your iOS application in your iOS emulator or on a physical device.
+Now you can run the iOS application in your iOS emulator or on a physical device.
 
-When you run the application, you will see a single view application with a "PING BLUEMIX" button. When you click this button the application will test the connection from the client to a protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the application as well as output to the Xcode console. 
+When you run the application, you will see a single view application with a **PING BLUEMIX** button. When you click this button the application will test a connection from the client to a protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the application as well as output to the Xcode console. 
 
-**Note:** Inside the ViewController a GET request is made to a protected resource in the Node.js runtime on Bluemix. This code has been provided in the MobileFirst Services Starter boilerplate. The Node.js code provided in the boilerplate must be present in order for the sample to work as expected.
+**Note:** Inside the **ViewController** a GET request is made to a protected resource in the Node.js runtime on Bluemix. This code has been provided in the MobileFirst Services Starter boilerplate. The Node.js code provided in this boilerplate must be present in order for the sample to work as expected.
 
 
-**Note:** This application runs on the latest version of XCode (7.0). The application has been updated to set Enable Bitcode to No in the build-settings as a workaround for the these settings introduced in iOS 9. You may also need to modify the application for Application Transport Security (ATS) changes made in iOS 9. For more info please see the following blog:
+**Note:** This application runs on the latest version of XCode (7.0). You may also need to modify the application for Application Transport Security (ATS) changes made in iOS 9. For more info please see the following blog:
 
 [Connect Your iOS 9 App to Bluemix](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)
 
