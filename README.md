@@ -63,12 +63,12 @@ Setup Facebook authentication
 
 Update the `Info.plist` file with your Facebook App information:
 
-- FacebookAppID: (For example `1581349575427190` , You can get App ID from Facebook developer console)
-- FacebookDisplayName: (For example `helloAuth`  , You can get App name from Facebook developer console)
+- **FacebookAppID**: (For example `1581349575427190` , You can get App ID from Facebook developer console)
+- **FacebookDisplayName**: (For example `helloAuth`  , You can get App name from Facebook developer console)
 
 Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 
-- URL Schemes: (for example `fb1581349575427190` , fb+Client ID from Facebook developer console)
+- **URL Schemes**: (for example `fb1581349575427190` , fb+Client ID from Facebook developer console)
 [Learn more about using Facebook as an identity provider](https://www.ng.bluemix.net/docs/#services/mobileaccess/security/id_provs/index-gentopic2.html#usingfacebookauthentication)   
 
 ### Running the iOS App
