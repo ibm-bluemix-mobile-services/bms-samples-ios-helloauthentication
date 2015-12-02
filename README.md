@@ -1,43 +1,65 @@
-# HelloAuthentication application for IBM MobileFirst Services on IBM Bluemix
+# iOS helloAuthentication application for IBM MobileFirst Services on IBM Bluemix
 ---
-The HelloAuthentication sample contains an Objective-C project that you can use to learn the Mobile Client Access service.  
-### Configure the back end for your HelloAuthentication application
-Before you can run the helloAuthentication application, you must set up an app on Bluemix.  By setting up this app, service instances for the data, push, security, and monitoring functions of the app are configured.
+The helloAuthentication sample contains an Objective-C project that you can use to learn more about the Mobile Client Access service.  
 
-1. Sign up for a [Bluemix](http://bluemix.net) Account.
-2. Create a mobile app.  In the Boilerplates section Bluemix catalog, click **MobileFirst Services Starter**.  Choose a **Name** and click **Create**.
-3. Set up at least one Authentication method on Bluemix for your mobile App (The sample is currently configured for Facebook)
+Sections covered to use the helloPush sample for Objective-C:
 
-### Downloading the samples
-Clone the samples from Github with the following command:
+1. [Downloading the helloAuthenciation sample](#downloading-the-helloauthentication-sample)
+2. [Configuring the back end for your helloAuthentication application](#configuring-the-back-end-for-your-helloauthentication-application)
+3. [Configuring the front end in the helloAuthentication sample](#configuring-the-front-end-in-the-helloauthentication-sample)
+4. [Running the iOS app](#running-the-ios-app)
+
+### Before you begin
+Before you start, make sure you have:
+
+- A [Bluemix](http://bluemix.net) account.
+
+### Downloading the helloAuthentication sample
+Clone the sample from Github with the following command:
 
 git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication
 
+### Configuring the back end for your HelloAuthentication application
+Before you can run the helloAuthentication application, you must set up an app on Bluemix.  The following procedure shows you how to create a MobileFirst Services Starter application. A Node.js runtime environment is created so that you can provide server-side functions, such as resource URIs and static files. The Cloudant®NoSQL DB, IBM Push Notifications, and Mobile Client Access services are then added to the app.
 
-### Configure the front end in the HelloAuthentication sample
-1. In a terminal, navigate to the bms-samples-ios-helloauthentication/helloAuthentication directory where the project was cloned
-3. Install Cocoapod client if not already installed `sudo gem install cocoapods`
-4. Configure the Cocoapod repository if not already configured `pod setup`
-3. Run the `pod install` command to download and install dependecies.
-4. Open the Xcode workspace: `open helloAuthentication.xcworkspace`. From now on, open the xcworkspace file since it has the corret dependencies and configuration.
-4. Open the AppDelegate and add the corresponding ApplicationRoute and
-ApplicationID in the application didFinishLaunchingWithOptions method:
+Create a mobile backend in the  Bluemix dashboard:
+
+1.	In the Boilerplates section Bluemix catalog, click MobileFirst Services Starter.
+2.	Enter a name and host for your mobile backend and click Create.
+3.	Click **Finish**.
+
+Configure the Mobile Client Access service:
+
+1.	In the Mobile Client Access dashboard, go to the Authentication tab to configure your authentication service.  
+2.  Choose your authentication type (this sample has been configured for Facebook authentication).
+3.  Enter the required configuration settings (APP ID for Facebook authentication).
+
+**Note:** If you have not previously created a Facebook mobile application, please follow the instructions on how to [Register and Configure an App](https://developers.facebook.com/docs/apps/register#create-app).
+
+### Configuring the front end in the HelloAuthentication sample
+1. In a terminal, navigate to the **bms-samples-ios-helloauthentication** directory where the project was cloned
+2. Navigate to the helloAuthentication folder
+3. If the Cocoapod client is not installed, install it using the following command: `sudo gem install cocoapods`
+4. If the Cocoapod repository is not configured, configure it using the following command: `pod setup`
+5. Run the `pod install` command to download and install the required dependencies.
+6. Open the Xcode workspace: `open helloAuthentication.xcworkspace`. From now on, open the xcworkspace file since it contains all the dependencies and configuration.
+7. Open the **AppDelegate.m** and add the corresponding **ApplicationRoute** and
+**ApplicationID** in the application **didFinishLaunchingWithOptions** method:
 
 
-Objective C:
-
+```objective-c
 (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
 //initialize SDK with IBM Bluemix application ID and route
-//TODO: Please Enter a valid ApplicationRoute for initializaWithBacken Route and a valid ApplicationId for backenGUID
+//TODO: Enter a valid ApplicationRoute for initializaWithBacken Route and a valid ApplicationId for backenGUID
 IMFClient *imfClient = [IMFClient sharedInstance];
 [imfClient initializeWithBackendRoute:@"<APPLICATION_ROUTE>" backendGUID:@"<APPLICATION_ID>"];			
 
 return YES;
 }
+```
 
-
-####Setup Facebook authentication
+Setup Facebook authentication
 
 Update the `Info.plist` file with your Facebook App information:
 
@@ -49,17 +71,18 @@ Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 - URL Schemes: (for example `fb1581349575427190` , fb+Client ID from Facebook developer console)
 [Learn more about using Facebook as an identity provider](https://www.ng.bluemix.net/docs/#services/mobileaccess/security/id_provs/index-gentopic2.html#usingfacebookauthentication)   
 
-### Run the iOS App
-Now you can run your iOS application in your mobile emulator or on your device.
+### Running the iOS App
+Now you can run your iOS application in your iOS emulator or on a physical device.
 
-You will see a single view application with a "PING BLUEMIX" button. When you click this button the application will test the connection from the client to a protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the log as well as in the application. 
+When you run the application, you will see a single view application with a "PING BLUEMIX" button. When you click this button the application will test the connection from the client to a protected resource in the backend Bluemix application. Since this is a protected resource, the authentication process will begin. Login to the authenticaiton service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state an error will be displayed in the application as well as output to the Xcode console. 
 
-Note: Inside the ViewController a Get request to the Node.js runtime on Bluemix. This code has been provided in the MobileFirst Services Starter boilerplate.
+**Note:** Inside the ViewController a GET request is made to a protected resource in the Node.js runtime on Bluemix. This code has been provided in the MobileFirst Services Starter boilerplate. The Node.js code provided in the boilerplate must be present in order for the sample to work as expected.
 
 
-Note: This application has been built to run on the latest version of XCode (7.0) as well as the latest version of Swift (2.0). Also the application has updated to allow "NSAllowsArbitraryLoads" for NSAppTransportSecurity as a workaround for the Application Transport Security settings introduced in iOS 9. For more info please see the following blog:
+**Note:** This application runs on the latest version of XCode (7.0). The application has been updated to set Enable Bitcode to No in the build-settings as a workaround for the these settings introduced in iOS 9. You may also need to modify the application for Application Transport Security (ATS) changes made in iOS 9. For more info please see the following blog:
 
 [Connect Your iOS 9 App to Bluemix](https://developer.ibm.com/bluemix/2015/09/16/connect-your-ios-9-app-to-bluemix/)
+
 
 ### License
 This package contains sample code provided in source code form. The samples are licensed under the under the Apache License, Version 2.0 (the "License"). You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and may also view the license in the license.txt file within this package. Also see the notices.txt file within this package for additional notices.
