@@ -5,8 +5,8 @@ The helloAuthentication sample contains an Objective-C project that you can use 
 Use the following steps to configure the helloAuthentication sample for Objective-C:
 
 1. [Download the helloAuthentication sample](#downloading-the-helloauthentication-sample)
-2. [Configure the mobile backend for your helloAuthentication application](#configuring-the-mobile-backend-for-your-helloauthentication-application)
-3. [Configure the front end in the helloAuthentication sample](#configuring-the-front-end-in-the-helloauthentication-sample)
+2. [Configure the mobile backend for your helloAuthentication application](#configure-the-mobile-backend-for-your-helloauthentication-application)
+3. [Configure the front end in the helloAuthentication sample](#configure-the-front-end-in-the-helloauthentication-sample)
 4. [Run the iOS app](#running-the-ios-app)
 
 ### Before you begin
@@ -19,7 +19,7 @@ Clone the sample from Github with the following command:
 
 ```git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication```
 
-### Configuring the mobile backend for your helloAuthentication application
+### Configure the mobile backend for your helloAuthentication application
 Before you can run the helloAuthentication application, you must set up an app on Bluemix.  The following procedure shows you how to create a MobileFirst Services Starter application. A Node.js runtime environment is created so that you can provide server-side functions, such as resource URIs and static files. The Cloudant® NoSQL DB, IBM Push Notifications, and Mobile Client Access services are then added to the app.
 
 Create a mobile backend in the Bluemix dashboard:
@@ -36,7 +36,7 @@ Configure the Mobile Client Access service:
 
 **Note:** If you have not previously created a Facebook mobile application, follow the instructions on how to [Register and Configure an App](https://developers.facebook.com/docs/apps/register#create-app).
 
-### Configuring the front end in the helloAuthentication sample
+### Configure the front end in the helloAuthentication sample
 1. In a terminal, navigate to the `bms-samples-ios-helloauthentication` directory where the project was cloned.
 2. Navigate to the `helloAuthentication` folder.
 3. If the CocoaPods dependency manager is not installed, install it with the following command:
@@ -70,7 +70,7 @@ Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 - **URL Schemes**: (for example `fb1581349575427190` , fb+Client ID from Facebook developer console)
 [Learn more about using Facebook as an identity provider](https://www.ng.bluemix.net/docs/#docs/services/mobileaccess/security/facebook/index.html)   
 
-### Running the iOS app
+### Run the iOS app
 Now you can run the iOS application in your iOS emulator or on a physical device.
 
 When you run the application, you will see a single view application with a **PING BLUEMIX** button. When you click this button the application tests a connection from the client to a protected resource in the backend Bluemix application. Because this is a protected resource, the authentication process will begin. Login to the authentication service (Facebook in this example).  The application will then display if the connection was successful or unsuccessful. In the unsuccessful state, an error is displayed in the application and the output to the Xcode console.
