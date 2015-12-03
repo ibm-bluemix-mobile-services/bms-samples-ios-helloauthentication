@@ -19,7 +19,7 @@ Clone the sample from Github with the following command:
 
 ```git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication```
 
-### Configuring the mobile backend for your HelloAuthentication application
+### Configuring the mobile backend for your helloAuthentication application
 Before you can run the helloAuthentication application, you must set up an app on Bluemix.  The following procedure shows you how to create a MobileFirst Services Starter application. A Node.js runtime environment is created so that you can provide server-side functions, such as resource URIs and static files. The Cloudant® NoSQL DB, IBM Push Notifications, and Mobile Client Access services are then added to the app.
 
 Create a mobile backend in the Bluemix dashboard:
@@ -36,7 +36,7 @@ Configure the Mobile Client Access service:
 
 **Note:** If you have not previously created a Facebook mobile application, follow the instructions on how to [Register and Configure an App](https://developers.facebook.com/docs/apps/register#create-app).
 
-### Configuring the front end in the HelloAuthentication sample
+### Configuring the front end in the helloAuthentication sample
 1. In a terminal, navigate to the `bms-samples-ios-helloauthentication` directory where the project was cloned.
 2. Navigate to the `helloAuthentication` folder.
 3. If the CocoaPods dependency manager is not installed, install it with the following command:
