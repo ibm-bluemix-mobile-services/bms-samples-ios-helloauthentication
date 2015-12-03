@@ -19,15 +19,15 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>FacebookAppID</key>
-	<string>123456789</string>
+	<string>600047123465992</string>
 	<key>FacebookDisplayName</key>
-	<string>helloAuth</string>
+	<string>BlueList</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb123456789</string>
+				<string>fb600047123465992</string>
 			</array>
 		</dict>
 	</array>

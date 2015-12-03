@@ -29,6 +29,7 @@
     
     IMFClient *imfClient = [IMFClient sharedInstance];
     [imfClient initializeWithBackendRoute:@"<APPLICATION_ROUTE>" backendGUID:@"<APPLICATION_ID>"];
+    [[IMFFacebookAuthenticationHandler sharedInstance] registerWithDefaultDelegate];
     return YES;
 }
 
