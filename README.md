@@ -14,7 +14,7 @@ Before you start, make sure you have:
 
 - A [Bluemix](http://bluemix.net) account.
 
-### Downloading the helloAuthentication sample
+### Download the helloAuthentication sample
 Clone the sample from Github with the following command:
 
 ```git clone https://github.com/ibm-bluemix-mobile-services/bms-samples-ios-helloauthentication```
