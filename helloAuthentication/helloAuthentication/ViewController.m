@@ -51,7 +51,7 @@
             NSLog(@"You have connected to a protected Bluemix endpoint successfully: %@", backendURL);
             _topLabel.text = @"Yay!";
             _bottomLabel.text = @"Connected to MCA protected endpoint";
-            _errorTextView.text = [NSString stringWithFormat:@"Endpoint: %@", backendURL];
+            _errorTextView.text = [NSString stringWithFormat:@"%@", backendURL];
             
         }
     }];
