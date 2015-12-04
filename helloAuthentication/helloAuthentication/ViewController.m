@@ -27,7 +27,7 @@
 }
 
 -(IBAction)testBluemixConnection:(id)sender{
-    ///Testing the connection to Bluemix by sending a request to a protected resources on the Node.js application. This Node.js piece was provided in the MobileFirst Services Starter boilerplate. The below request uses the applicationRoute that was provided when initializing the IMFClient in the AppDelegate.
+    ///Testing the connection to Bluemix by sending a request to a protected resource on the Node.js application. This Node.js piece was provided in the MobileFirst Services Starter boilerplate. The below request uses the applicationRoute that was provided when initializing the IMFClient in the AppDelegate.
     _topLabel.text = @"Hello Auth";
     _bottomLabel.text = @"Attempting to connect";
     _errorTextView.text = @"";
