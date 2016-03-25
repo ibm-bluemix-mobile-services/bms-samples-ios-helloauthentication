@@ -69,7 +69,7 @@ Update the `Info.plist` file with your Facebook App information:
 Update URL Types, Item 0, URL Schemes, update Item 0 as follows:
 
 - **URL Schemes**: (for example `fb1581349575427190` , fb+Client ID from Facebook developer console)
-[Learn more about using Facebook as an identity provider](https://www.ng.bluemix.net/docs/#docs/services/mobileaccess/security/facebook/index.html)   
+[Learn more about using Facebook as an identity provider for iOS](https://www.bluemix.net/docs/services/mobileaccess/facebook-auth-ios.html)   
 
 ### Run the iOS app
 Now you can run the iOS application in your iOS emulator or on a physical device.
