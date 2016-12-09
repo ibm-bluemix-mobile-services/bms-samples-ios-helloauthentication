@@ -1,5 +1,7 @@
 # iOS helloAuthentication Sample Application for Bluemix Mobile Services
 
+> **ATTENTION:** This sample has been deprecated and is no longer supported. Please visit [Bluemix Mobile](https://console.ng.bluemix.net/mobile/create-project/) and choose a starter to add Push, Analytics, and Authentication capabilities to download and start coding with a working project.
+
 The helloAuthentication sample contains an Objective-C project that you can use to learn more about the Mobile Client Access service.  
 
 Use the following steps to configure the helloAuthentication sample for Objective-C:
